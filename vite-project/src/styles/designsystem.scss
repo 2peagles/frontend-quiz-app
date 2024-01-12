@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(/assets/fonts/static/Rubik-Regular.ttf) format('ttf'),
+         url(/assets/fonts/static/Rubik-Medium.ttf) format('ttf'),
+         url(/assets/fonts/static/Rubik-italic.ttf) format('ttf'),
+         url(/assets/fonts/static/Rubik-Medium.ttf) format('ttf'),
+         url(/assets/fonts/Rubik-VariableFont_wght.ttf) format('ttf');
+}
+// COLORS
+$purple: rgb(167,41,245);
+$darkgrey:rgb(49,62,81);
+$midgrey:rgb(59, 77, 102);
+$lowgrey:rgb(98, 108, 127);
+$lightblue:rgb(171, 193, 225);
+$offwhite:rgb(244, 246, 250);
+$white:(255,255,255);
+$green:(38, 215, 130);
+$red:(238, 84, 84);
+
+// TYPOGRAHPY
+.display{
+    // color: var(--Dark-Navy, #313E51);
+
+/* Display */
+    font: {
+        family: 'Rubik', sans-serif;
+        size: 144px;
+        style: normal;
+        weight: 500;
+    };
+    line-height: 100%;
+}
+.headinglgbold {
+    /* Heading L (Bold) */
+    font: {
+        family: 'Rubik', sans-serif;
+        size: 64px;
+        style: normal;
+        weight: 500;
+    };
+    line-height: 64px;
+}
+
+.headinglgregular{
+    // color: var(--Dark-Navy, #313E51);
+
+/* Heading L (Regular) */
+    font: {
+        family: Rubik;
+        size: 64px;
+        style: normal;
+        weight: 300;
+    }
+    line-height: 100%;
+}
+
+.headingm{
+    // color: var(--Dark-Navy, #313E51);
+
+/* Heading M */
+    font: {
+        family: Rubik;
+        size: 36px;
+        style: normal;
+        weight: 500;
+    }
+    line-height: 120%;
+}
+.headings{
+    // color: var(--Dark-Navy, #313E51);
+
+/* Heading S */
+    font: {
+        family: Rubik;
+        size: 28px;
+        style: normal;
+        weight: 500;
+    }
+    line-height: 100%;
+}
+.bodym{
+    // color: var(--Dark-Navy, #313E51);
+    font: {
+    /* Body M */
+        family: Rubik;      
+        size: 24px;       
+        style: normal;     
+        weight: 400;      
+    }
+    line-height: 150%;
+}
+
+.bodys{
+    // color: var(--Grey-Navy, #626C7F);
+    font: {
+        family: Rubik;
+        size: 16px;
+        style: normal;
+        weight: 400;
+    }
+    line-height: 30px;
+}
+// INTERACTIVE ELEMENTS
+
+.btn{
+    display: flex;
+    place-content: left;
+    align-items: center;
+    width: 564px;
+    height:20px;
+    padding:40px 15px;
+    margin:1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    border:1px solid transparent;
+    outline:1px solid transparent;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    
+    &:focus{
+        background-color: $purple;
+    }
+    &:hover{
+        // transition: 9s;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), var(--Purple, #A729F5);
+    }
+}
+
+// layout
+@mixin maingrid(){
+    margin: auto;
+    max-width: 1160px;
+    // max-height: 564px;
+    display: grid;
+    // place-self: top;
+    
+    justify-self: top;
+    grid-template-rows: 165px 1fr;
+    grid-template-columns: 2 564px;
+    background-color:$offwhite;
+}
+@mixin flexboxtop(){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.topgrid{
+    grid-area: 1 / 2 / 1 / 2;
+}
+.topleftgrid{
+    grid-area: 1 / 1 / 1 / 1;
+}
+.leftgrid{
+    grid-area: 2 / 1 / 2 / 1 ;
+}
+.rightgrid{
+    grid-area: 2 / 2 / 2 / 2;
+
+    @include flexboxtop();
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}

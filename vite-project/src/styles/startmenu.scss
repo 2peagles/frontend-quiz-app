@@ -36,3 +36,10 @@
 
     @include flexboxtop();
 }
+.themetoggle{
+    width:fit-content;
+    height: fit-content;
+    background-color: transparent;
+    outline:1px solid transparent;
+    border:1px solid transparent;
+}
